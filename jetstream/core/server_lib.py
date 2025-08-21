@@ -50,13 +50,13 @@ _HOST = "[::]"
 # The default logger created in orchestrator.py only logs WARNINGs and above
 logger = logging.getLogger(__name__)
 logger.propagate = False
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter(
     "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 
 info_handler = logging.StreamHandler(sys.stdout)
-info_handler.setLevel(logging.INFO)
+info_handler.setLevel(logging.DEBUG)
 info_handler.setFormatter(formatter)
 logger.addHandler(info_handler)
 
